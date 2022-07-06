@@ -1,0 +1,15 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    # eureka是一个服务注册中心，管理向其进行注册的服务
+    # 在eureka内只有客户端和服务端两个组件,服务端是不需要注册的
+    register-with-eureka: false
+    fetch-registry: false
+    # 设置 eureka 服务的访问地址
+    # 向 eureka 注册、查询服务都需要依赖这个地址
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/
